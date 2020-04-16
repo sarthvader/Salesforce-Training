@@ -1,0 +1,27 @@
+<apex:page controller="OppWizardController" tabStyle="Opportunity">
+    </script>
+    <apex:sectionHeader subtitle="Step 1 of 3" title="New Customer Opportunity" />
+
+    <apex:form>
+        <apex:pageBlock title="CustomerInformation" mode="edit">
+
+            <apex:pageBlockSection title="Account Information">
+                <apex:inputField value="{!account.Name}"></apex:inputField>
+                <apex:inputField value="{!account.Site}"></apex:inputField>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection title="Contact Information">
+                <apex:inputField value="{!contact.FirstName}"></apex:inputField>
+                <apex:inputField value="{!contact.LastName}"></apex:inputField>
+                <apex:inputField value="{!contact.Phone}"></apex:inputField>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockButtons>
+                <apex:commandButton value="Next" action="{!toPage2}"></apex:commandButton>
+                <apex:commandButton value="Cancel"></apex:commandButton>
+            </apex:pageBlockButtons>
+
+        </apex:pageBlock>
+    </apex:form>
+
+</apex:page>

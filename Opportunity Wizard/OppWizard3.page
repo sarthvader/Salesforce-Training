@@ -1,0 +1,34 @@
+<apex:page controller="OppWizardController" tabStyle="Opportunity">
+    <apex:sectionHeader subtitle="Step 3 of 3" title="New Customer Opportunity" />
+
+    <apex:form>
+        <apex:pageBlock title="Confirmation Page">
+
+            <apex:pageBlockSection title="Account Information">
+                <apex:outputField value="{!account.name}" />
+                <apex:outputField value="{!account.Site}" />
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection title="Contact Information">
+                <apex:outputField value="{!contact.FirstName}" />
+                <apex:outputField value="{!contact.LastName}" />
+                <apex:outputField value="{!contact.Phone}" />
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection title="Opportunity Information">
+                <apex:outputField value="{!opportunity.Name}" />
+                <apex:outputField value="{!opportunity.Amount}" />
+                <apex:outputField value="{!opportunity.StageName}" />
+                <apex:outputField value="{!opportunity.CloseDate}" />
+            </apex:pageBlockSection>
+
+            <apex:pageBlockButtons>
+                <apex:commandButton value="Previous"></apex:commandButton>
+                <apex:commandButton value="Save" action="{!save}"></apex:commandButton>
+                <apex:commandButton value="Cancel" action="{!cancel}"></apex:commandButton>
+            </apex:pageBlockButtons>
+
+        </apex:pageBlock>
+    </apex:form>
+
+</apex:page>
